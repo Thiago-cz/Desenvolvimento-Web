@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div{
+    width: 1000px;
+    height : 500px;
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.quadrado {
+    background-color: yellow;
+    width: 25%;
+    height: 25%;
+    
+}
