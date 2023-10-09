@@ -7,51 +7,124 @@
     <link rel="stylesheet" href="Style.css" />
   </head>
   <body>
-    <h2>Formulario de cadastro de usuario</h2>
-    <form method="post" name="cadastroUsuario" id="formCadastroUsuario" method="post">
+    <form action="Servidor.html" name="cadastroUsuario" id="formCadastroUsuario" method="get">
       <fieldset id="infoCadastro">
-        <label class="labelInput">
-          Nome
+        <label class="labelInput" id="labelNome">
+          <span id="spanNome">Nome </span>
           <input type="text" id="inputNome" />
         </label>
-        <label class="labelInput">
-          Idade
-          <input type="number" id="inputIdade" />
+        <label class="labelInput" id="labelIdade">
+          <span id="spanIdade">Idade </span>
+          <input type="number" id="inputIdade" min="18" max="110" value="0" />
         </label>
-        <label class="labelInput">
-          Data nascimento
-          <input type="text" id="inputData" />
+        <label class="labelInput" id="labelDataNascimento">
+          <span id="spanDataNascimento">Data Nascimento </span>
+          <input type="text" id="inputDataNascimento" />
         </label>
-        <label class="labelInput">
-          CPF/CNPJ
+        <label class="labelInput" id="labelCPF/CNPJ">
+          <span id="spanCPF/CNPJ">CPF/CNPJ </span>
           <input type="text" id="inputCPFCNPJ" />
         </label>
-        <label class="labelInput">
-          Email
+        <label class="labelInput" id="labelEmail">
+          <span id="spanEmail">Email </span>
           <input type="text" id="inputEmail" />
         </label>
-        <label class="labelInput">
-          Telefone
+        <label class="labelInput" id="labelTelefone">
+          <span id="spanTelefone">Telefone </span>
           <input type="text" id="inputTelefone" />
         </label>
-        <label class="labelInput">
-          Sexo
-          <input type="text" id="inputSexo" />
-        </label>
-        <label class="labelInput">
-          Idiomas falados
-          <input type="text" id="inputIdiomasFalados" />
-        </label>
-        <label class="labelInput">
-          Estado
-          <input type="text" id="inputEstado" />
-        </label>
-        <label class="labelInput">
-          Cidade
-          <input type="text" id="inputCidade" />
-        </label>
+        <div class="labelInput" id="divSexo">
+          <span id="spanSexo">Sexo </span>
+          <div id="divRadioSexo">
+            <label for="radioMasculino" class="labelRadio"
+              >Masculino
+              <input type="radio" name="radioButton" id="radioMasculino" />
+            </label>
+            <label for="radioOutro" class="labelRadio"
+              >Outro
+              <input type="radio" name="radioButton" id="radioOutro" />
+            </label>
+            <label for="radioFeminino" class="labelRadio"
+              >Feminino
+              <input type="radio" name="radioButton" id="radioFeminino" />
+            </label>
+          </div>
+        </div>
+        <div class="labelInput" id="divIdiomasFalados">
+          <span id="spanIdiomasFalados">Idiomas falados </span>
+          <div id="divCheckBox">
+            <label for="checkBoxAlemao" class="labelCheckBox" id="labelCheckBoxAlemao"
+              >Alemão
+              <input class="inputCheckBox" name="idioma" type="checkbox" id="checkBoxAlemao" />
+            </label>
+            <label for="checkBoxFrances" class="labelCheckBox" id="labelCheckBoxFrances"
+              >Francês
+              <input class="inputCheckBox" name="idioma" type="checkbox" id="checkBoxFrances" />
+            </label>
+            <label for="checkBoxIngles" class="labelCheckBox" id="labelCheckBoxIngles"
+              >Inglês
+              <input class="inputCheckBox" name="idioma" type="checkbox" id="checkBoxIngles" />
+            </label>
+            <label for="checkBoxPortugues" class="labelCheckBox" id="labelCheckBoxPortugues"
+              >Português
+              <input class="inputCheckBox" name="idioma" type="checkbox" id="checkBoxPortugues" />
+            </label>
+            <label for="checkBoxMandarin" class="labelCheckBox" id="labelCheckBoxMandarin"
+              >Mandarin
+              <input class="inputCheckBox" name="idioma" type="checkbox" id="checkBoxMandarin" />
+            </label>
+          </div>
+        </div>
+        <div id="divCidadeEstado">
+          <label class="labelInput" id="labelEstado">
+            <span id="spanEstado">Estado </span>
+            <select name="Estado" id="selectEstado">
+              <option value="invalido">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </label>
+          <label class="labelInput" id="labelCidade">
+            <span id="spanCidade">Cidade </span>
+            <select name="Cidade" id="selectCidade">
+              <option value="invalido">Selecione</option>
+              <option value="goiania">Goiânia</option>
+              <option value="anapolis">Anápolis</option>
+              <option value="aparecida-de-goiania">Aparecida de Goiânia</option>
+              <option value="rio-verde">Rio Verde</option>
+              <option value="catalao">Catalão</option>
+            </select>
+          </label>
+        </div>
       </fieldset>
-      <button type="submit">Enviar</button>
+      <div id="divBtnEnviar">
+        <button type="submit" id="buttonEnviar">ENVIAR</button>
+      </div>
     </form>
   </body>
 </html>

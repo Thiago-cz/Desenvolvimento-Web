@@ -1,24 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     width: 100%;
-    height: 100vh;
     display: grid;
     justify-content: center;
     align-items:center;
     font-size: 1.5em;
     margin: 0;
     padding: 0;
+    background-color: beige;
 }
 
 .labelInput {
     display: grid;
-    margin: 2%;
+    width: 15vw;
+    justify-content: space-around;
+}
+
+#divSexo {
+    height: 15vh;
+    display:grid;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: .5%;
+}
+
+#divRadioSexo, #divCheckBox{
+    font-size: .7em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.labelRadio{
+    width: 45%;
+    height: 40%;
+    display: flex;
+}
+
+input[type=radio], input[type=checkbox]{
+    border: 0px;
+    width: 20px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+#divIdiomasFalados {
+    width: 15vw;
+    height: 15vh;
+    border: solid 2px black;
+    border-radius: 10px;
+}
+
+#spanIdiomasFalados {
+    height: 4vh;
+}
+
+#divCheckBox {
+    padding: 1%;
+    flex-direction: row;
+}
+
+#divCidadeEstado {
+    border: solid 2px black;
+    height: 15vh;
+    border-radius: 10px;
+}
+#divCidadeEstado label {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+#divCidadeEstado select {
+    width: 6.5vw;
+    border-radius: 5px;
+}
+
+.labelCheckBox {
+    justify-content: space-around;
 }
 
 #formCadastroUsuario{
-    background-color: beige;
-    width: 36vw;
+    width: 50vw;
+    height: 95vh;
+    display: grid;
+    gap: 1%;
 }
 
 input {
@@ -28,11 +99,40 @@ input {
 }
 
 #infoCadastro{
-    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: solid black;
-    gap: 7%;
     font-family: 'Pixelify Sans', cursive;
+    border-radius: 20px;
+    background-color: rgb(230, 230, 220);
+    padding: 2%;
+}
+
+#divBtnEnviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonEnviar {
+    width: 50%;
+    height: 40%;
+    font-size: 1.5em;
+    font-family: 'Pixelify Sans', cursive;
+    border-radius: 30px;
+}
+
+.errorInput{
+    border: 2px solid rgb(205, 21, 21);
+}
+
+.validInput{
+    border: 2px solid green;
+}
+.validSpan{
+    color: green;
+}
+
+.errorSpan{
+    color: red;
 }
