@@ -1,0 +1,104 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="Anuncio.js" defer></script>
+    <link rel="stylesheet" href="Anuncio.css">
+  </head>
+  <body>
+    <div id="content">
+      <nav id="navMenus">
+        <div id="labelsMenu">
+          <label for="inputCriarAnuncio">Criar</label>
+          <label for="inputEditarAnuncio">Editar</label>
+          <label for="inputRecuperarAnuncio">Recuperar </label>
+          <label for="inputDeletarAnuncio">Deletar</label>
+        </div>
+        <div id="radioMenus">
+          <input style="display: none;" type="radio" name="menu" id="inputCriarAnuncio" />
+          <input style="display: none;" type="radio" name="menu" id="inputEditarAnuncio"/>
+          <input style="display: none;" type="radio" name="menu" id="inputRecuperarAnuncio" />
+          <input style="display: none;" type="radio" name="menu" id="inputDeletarAnuncio" />
+        </div>
+      </nav>
+      <div id="divCriarAnuncio">
+        <form action="" id="formCriarAnuncio">
+          <div id="camposInput">
+            <div id="divTitulo">
+              <label for="inputNomeCriar">Nome</label>
+              <input
+                type="text"
+                name=""
+                id="inputNomeCriar"
+                placeholder="Joao da Silva Nascimento"
+              />
+            </div>
+            <div id="divDescricao">
+              <label for="inputDescricaoCriar">Descricao</label>
+              <input type="text" id="inputDescricaoCriar" />
+            </div>
+            <div id="divPreco">
+              <label for="inputPrecoCriar">Preco</label>
+              <input type="text" name="" id="inputPrecoCriar" />
+            </div>
+            <div id="divUsuarioId">
+              <label for="inputUsuarioId">Usuario ID</label>
+              <input type="text" id="inputUsuarioId" />
+            </div>
+          </div>
+          <button type="submit" id="btnEnviarCriar">Criar Anuncio</button>
+        </form>
+      </div>
+      <div id="divEditarAnuncio" style="display: none;">
+        <form action="" id="formEditarAnuncio">
+          <div id="camposInput">
+            <div id="divTitulo">
+              <label for="inputNomeEditarr">Nome</label>
+              <input
+                type="text"
+                name=""
+                id="inputNomeEditar"
+                placeholder="Joao da Silva Nascimento"
+              />
+            </div>
+            <div id="divDescricao">
+              <label for="inputDescricaoEditar">Descricao</label>
+              <input type="text" id="inputDescricaoEditar" />
+            </div>
+            <div id="divPreco">
+              <label for="inputPrecoEditar">Preco</label>
+              <input type="text" name="" id="inputPrecoEditar" />
+            </div>
+            <div id="divUsuarioId">
+              <label for="inputUsuarioIdEditar">Usuario ID</label>
+              <input type="text" id="inputUsuarioIdEditar" />
+            </div>
+          </div>
+          <button type="submit" id="btnEnviarEditar">Editar Anuncio</button>
+        </form>
+      </div>
+      <div id="divRecuperarAnuncio" style="display: none;">
+        <button id="buscarAnuncios">Buscar</button>
+        <table id="tableAnuciosRecuperar">
+          <tr>
+            <td>Nome</td>
+            <td>Descricao</td>
+            <td>Preco</td>
+            <td>usuario ID</td>
+          </tr>
+        </table>
+    </div>
+    <div id="divDeletarAnuncio" style="display: none;">
+          <table id="tableAnuciosDeletar">
+            <tr>
+              <td>Nome</td>
+              <td>Descricao</td>
+              <td>Preco</td>
+              <td>usuario ID</td>
+            </tr>
+          </table>
+      </div>
+    </div>
+  </body>
+</html>
