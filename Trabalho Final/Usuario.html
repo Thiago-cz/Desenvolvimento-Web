@@ -1,0 +1,115 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuario</title>
+    <script src="Usuario.js" type="module" defer></script>
+    <link rel="stylesheet" href="Usuario.css" />
+  </head>
+  <body>
+    <div>
+      <div id="content">
+        <nav id="navMenus">
+          <div id="labelsMenu">
+            <label for="inputEditarUsuario">Editar</label>
+            <label for="inputRecuperarUsuario">Recuperar </label>
+            <label for="inputDeletarUsuario">Deletar</label>
+          </div>
+          <div id="radioMenus">
+            <input
+              style="display: none"
+              type="radio"
+              name="menu"
+              id="inputEditarUsuario"
+            />
+            <input
+              style="display: none"
+              type="radio"
+              name="menu"
+              id="inputRecuperarUsuario"
+            />
+            <input
+              style="display: none"
+              type="radio"
+              name="menu"
+              id="inputDeletarUsuario"
+            />
+          </div>
+        </nav>
+        <!-- <div id="divCriarUsuario">
+          <form action="" id="formCriarUsuario">
+            <div id="camposInput">
+              <div id="divTitulo">
+                <label for="inputNomeCriar">Nome</label>
+                <input
+                  type="text"
+                  name=""
+                  id="inputNomeCriar"
+                  placeholder="Joao da Silva Nascimento"
+                />
+              </div>
+              <div id="divDescricao">
+                <label for="inputDescricaoCriar">Descricao</label>
+                <input type="text" id="inputDescricaoCriar" />
+              </div>
+              <div id="divPreco">
+                <label for="inputPrecoCriar">Preco</label>
+                <input type="text" name="" id="inputPrecoCriar" />
+              </div>
+              <div id="divUsuarioId">
+                <label for="inputUsuarioId">Usuario ID</label>
+                <input type="text" id="inputUsuarioId" />
+              </div>
+            </div>
+            <button type="submit" id="btnEnviarCriar">Criar Usuario</button>
+          </form>
+        </div> -->
+        <div id="divEditarUsuario">
+          <form action="" id="formEditarUsuario">
+            <div id="camposInput">
+              <div id="divId">
+                <label for="inputIdEditar">ID</label>
+                <input type="number" id="inputIdEditar" />
+              </div>
+              <div id="divNome">
+                <label for="inputNomeEditar">Nome</label>
+                <input
+                  type="text"
+                  placeholder="Joao da Silva Nascimento"
+                  id="inputNomeEditar"
+                />
+              </div>
+              <div id="divEmail">
+                <label for="inputEmailEditar">Email</label>
+                <input type="text" id="inputEmailEditar" />
+              </div>
+              <div id="divSenha">
+                <label for="inputSenhaEditar">Senha</label>
+                <input type="text" id="inputSenhaEditar" />
+              </div>
+            </div>
+            <button type="submit" id="btnEnviarEditar">Confirmar</button>
+          </form>
+        </div>
+        <div id="divRecuperarUsuario" style="display: none">
+          <button id="btnRecuperarUsuarios">Buscar</button>
+          <table id="tableRecuperarUsuarios">
+            <tr>
+              <td>ID</td>
+              <td>Nome</td>
+              <td>Email</td>
+            </tr>
+          </table>
+        </div>
+        <div id="divDeletarUsuario" style="display: none">
+          <button id="btnDeletarUsuario">Deletar Usuario</button>
+        </div>
+      </div>
+      <!-- <button id="btnGetUsuario" type="button">Get Usuarios</button>
+      <button id="btnPutUsuario">Put usuario</button>
+      <button id="btnDeletarUsuario" type="button">Deletar</button>
+      <button id="btnLogout">Logout</button>
+      <a href="./Login.html">Voltar login</a> -->
+    </div>
+  </body>
+</html>

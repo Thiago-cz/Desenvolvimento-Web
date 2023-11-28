@@ -20,7 +20,6 @@ window.addEventListener("load", () => {
   forms.formAtualizar.inputTelefone.addEventListener("blur", validarTelefone);
   forms.formAtualizar.inputEmail.addEventListener("blur", validarEmail);
 
-
   let openRequest = window.indexedDB.open(dbName, "1.0");
   openRequest.addEventListener("error", (error) => {
     alert(`abertura do banco falhou ${openRequest.error}`);
@@ -47,20 +46,20 @@ function add(e) {
   e.preventDefault();
   //array com validade dos campos
   let campos = [
-    validarNome(forms.formCadastrar.inputNome),
-    validarTelefone(forms.formCadastrar.inputTelefone),
-    validarEmail(forms.formCadastrar.inputEmail)
+    forms.formCadastrar.inputNome.checked,
+    forms.formCadastrar.inputTelefone.checked,
+    forms.formCadastrar.inputEmail.checked,
   ];
   for (i of campos) {
     if (!i) {
-        alert('existem campos invalidos');
+      console.log("existem campos invalidos");
       return;
     }
   }
   let item = {
     usuario: forms.formCadastrar.inputNome.value,
     telefone: forms.formCadastrar.inputTelefone.value,
-    email: forms.formCadastrar.inputEmail.value
+    email: forms.formCadastrar.inputEmail.value,
   };
 
   let transacao = db.transaction(objectStoreName, "readwrite");
@@ -68,11 +67,11 @@ function add(e) {
   let request = objStore.add(item);
 
   request.onsuccess = () => {
-    alert("elemento criado com sucesso!!");
+    console.log("elemento criado com sucesso!!");
   };
 
   transacao.oncomplete = () => {
-    alert("transacao concluida no banco de dados!!!");
+    console.log("transacao concluida no banco de dados!!!");
   };
 
   transacao.onerror = (err) => {
@@ -105,13 +104,10 @@ function retreaveAll(e) {
   let objStore = transacao.objectStore(objectStoreName);
 
   let request = objStore.getAll();
+  
   request.onsuccess = function () {
     let result = request.result;
-    let strResult = [];
-    for (str of result) {
-      strResult.push(`${str.usuario} - ${str.telefone} - ${str.email};\n`);
-    }
-    console.log(`deu certo!!! ${strResult}`);
+    console.log(result);
   };
 }
 //ok
@@ -126,7 +122,7 @@ function remove(e) {
     console.log(`deu ruim ${err.target.error}`);
   };
 
-  transacao.oncomplete = () => {
+  transacao.oncomplete = () => {  
     alert("transacao concluida no banco de dados!!!");
   };
 
@@ -168,33 +164,19 @@ function put(e) {
     console.log("transacao completada com sucesso!!");
   };
 }
-
+//perguntar pq esse funcionou e as demais regex n funcianam
 function validarNome(campo) {
   let regex = new RegExp(/^([a-z]{2,30})$/, "i");
-  if (regex.test(campo.target.value)) {
-    campo.target.classList.remove("error");
-    campo.target.classList.add("valid");
-    campo.target.validity.valid = 'true';
-    return true;
+
+  if (campo.target.pattern == "") {
+    campo.target.pattern = regex.source;
   }
-  campo.target.classList.remove("valid");
-  campo.target.classList.add("error");
-  campo.validity.valid = 'false';
-  return false;
+  validarCampo(campo.target, regex);
 }
 
 function validarTelefone(campo) {
   let regex = new RegExp(/^((\+[\d]{2} ?)?\d?[\d]{4}\-?[\d]{4})$/);
-  if (regex.test(campo.target.value)) {
-    campo.target.classList.remove("error");
-    campo.target.classList.add("valid");
-    campo.target.validity.valid = 'true';
-    return true;
-  }
-  campo.target.classList.remove("valid");
-  campo.target.classList.add("error");
-  campo.target.validity.valid = 'false';
-  return false;
+  validarCampo(campo.target, regex);
 }
 
 function validarEmail(campo) {
@@ -202,14 +184,17 @@ function validarEmail(campo) {
     /^([a-z]{1}[a-z0-9\_\.\-]*\@[a-z]{3,}\.((com)|(io)|(biz)|(me)){1}(.[a-z]{2})?)$/,
     "i"
   );
-  if (regex.test(campo.target.value)) {
-    campo.target.classList.remove("error");
-    campo.target.classList.add("valid");
-    campo.target.validity.valid = 'true';
-    return true;
+  validarCampo(campo.target, regex);
+}
+
+function validarCampo(campo, regex) {
+  if (regex.test(campo.value)) {
+    campo.classList.remove("error");
+    campo.classList.add("valid");
+    campo.checked = true;
+    return;
   }
-  campo.target.classList.remove("valid");
-  campo.target.classList.add("error");
-  campo.target.validity.valid = 'false';
-  return false;
+  campo.classList.remove("valid");
+  campo.classList.add("error");
+  campo.checked = false;
 }

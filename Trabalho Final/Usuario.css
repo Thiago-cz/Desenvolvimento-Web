@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content{
+    border: 2px black solid;
+    border-radius: 15px;
+    width: 450px;
+    height: 600px;
+}
+
+#navMenus{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px 15px 0 0  ;
+    border: 2px black solid;
+}
+
+#labelsMenu{
+    display: flex;
+    justify-content: space-around;
+}
+
+#labelsMenu label{
+    display: flex;
+    font-size: 1.5rem;
+    width: 111.75px ;
+    justify-content: center;
+}

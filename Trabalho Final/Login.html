@@ -1,0 +1,48 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="Login.js" type="module"></script>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="divConteiner" id="divConteinerLogin">
+      <form action="" id="formLogin">
+        <span id="titulo">
+          <h1 class="cor">Login</h1>
+        </span>
+        <hr id="barra"/>
+          <div class="divEmail">
+            <label class="cor" for="inputEmailLogin">Email</label>
+            <input
+              type="email"
+              required
+              id="inputEmailLogin"
+              placeholder="usuario@gmail.com.br"
+            />
+          </div>
+          <div class="divSenha">
+            <label for="inputSenha" class="cor">Senha</label>
+            <input
+              type="password"
+              id="inputSenhaLogin"
+              placeholder="Aft3#2g@!"
+              required
+            />
+          </div>
+          <div id="divContinuarLogado">
+            <input type="checkbox" id="checkContinuarLogado" />
+            <label for="checkContinarLogado">Continuar logado</label>
+          </div>
+          <div class="divBtnLogin">
+            <button type="submit" id="btnLogin">Login</button>
+          </div>
+          <div class="divCriarConta">
+            <p>Não possiu uma conta?</p>
+            <button type="button" id="btnCriarConta">Criar Conta</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
