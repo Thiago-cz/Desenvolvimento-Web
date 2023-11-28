@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 login: thiago123@gmail.com
 senha: 12345
 
+=======
+login: thiago123@gmail.com
+senha: 12345
+
+>>>>>>> 3923f7f73c1b9c8785216db29c10e16549feafd3
 id: 27, nome: 'Thiago Carvalho', email: 'thiago123@gmail.com'

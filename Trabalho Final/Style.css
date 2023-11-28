@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     display: flex;
     justify-content: center;
@@ -97,3 +98,104 @@ p {
 }
 
 /* Tela criar conta de usuario */
+=======
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4FFE1;
+}
+
+.cor {
+    color: #564787;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    background-color: #564787;
+    width: 100%;
+    height: 3px;
+    border-radius: 60%;
+    opacity: 60%;
+}
+
+.divConteiner {
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    width: 250px;
+    height: 450px;
+    padding: 0 2%;
+    border-radius: 4%;
+    align-items: center;
+    background-color: #9AD4D6
+}
+
+.divEmail,
+.divSenha, .divNome {
+    width: 80%;
+    margin-bottom: 20px;
+    width: 200px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+input {
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.divBtnLogin, .divBtnCadastrar {
+    display: flex;
+    justify-content: center;
+}
+
+#btnLogin, #btnCadastrar {
+    width: 70%;
+    height: 5vh;
+    font-size: 1.7em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 7px;
+    margin-top: 10%;
+    background-color: #564787;
+    color: #ffffff;
+}
+
+.divContinuarLogado {
+    display: flex;
+    color: #564787;
+    justify-content: center;
+    align-items: center;
+}
+#checkContinuarLogado{
+    width: 20px;
+    height: 20px;
+}
+
+.divCriarConta, .divVoltarLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btnCriarConta, #btnVoltarLogin {
+    width: 60%;
+    border-radius: 7px;
+    color: rgb(0, 179, 255);
+    background-color: #ffffff;
+    color: #564787;
+    font-size: .8em;
+    font-weight: 600;
+}
+
+p {
+    color: #564787;
+}
+
+/* Tela criar conta de usuario */
+>>>>>>> 3923f7f73c1b9c8785216db29c10e16549feafd3

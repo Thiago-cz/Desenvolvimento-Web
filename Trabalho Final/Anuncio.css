@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     display: flex;
     justify-content: center;
@@ -30,3 +31,37 @@ body{
     justify-content: center;
 }
 
+=======
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content{
+    border: 2px black solid;
+    border-radius: 15px;
+    width: 450px;
+    height: 600px;
+}
+
+#navMenus{
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+}
+
+#labelsMenu{
+    display: flex;
+    border: 1px red solid;
+    justify-content: space-around;
+}
+
+#labelsMenu label{
+    display: flex;
+    font-size: 1.5rem;
+    width: 111.75px ;
+    justify-content: center;
+}
+
+>>>>>>> 3923f7f73c1b9c8785216db29c10e16549feafd3
